@@ -1,0 +1,24 @@
+.todos-task {
+  background-color: aliceblue;
+  border-bottom: 1px solid black;
+}
+
+button {
+  margin: auto;
+  width: 100%;
+  background-color: aliceblue;
+}
+
+.body {
+  margin: auto;
+  border: solid 1px green;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
