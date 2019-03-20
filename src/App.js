@@ -5,12 +5,12 @@ import "./components/TodoComponents/Todo.css";
 
 const todoData = [
   {
-    task: "Gains",
+    task: "Obtain Gains",
     id: Date.now(),
     completed: false
   },
   {
-    task: "Sick Nasty Guido Pump",
+    task: "Aquire the Sickest of Guido Pumps",
     id: Date.now(),
     completed: false
   },
@@ -50,6 +50,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="body">
+        <h1>Things to do at the Pumpatorium</h1>
         <TodoList todoDataList={this.state.todoList} />
         <TodoForm
           addNewTodo={this.addNewTodo}

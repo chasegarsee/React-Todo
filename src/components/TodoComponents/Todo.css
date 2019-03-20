@@ -1,6 +1,7 @@
 .todos-task {
   background-color: aliceblue;
   border-bottom: 1px solid black;
+  margin: 20px;
 }
 
 button {
@@ -21,4 +22,9 @@ button {
 form {
   display: flex;
   flex-direction: column;
+}
+
+input {
+  box-shadow: 1px 1px 5px goldenrod;
+  border: solid 2px goldenrod;
 }
