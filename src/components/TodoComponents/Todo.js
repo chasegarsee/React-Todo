@@ -1,5 +1,6 @@
 import React from "react";
 import "./Todo.css";
+
 function Todo(props) {
   return <div className="todos-task">{props.todos.task}</div>;
 }

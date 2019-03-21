@@ -5,22 +5,7 @@ import "./components/TodoComponents/Todo.css";
 
 const todoData = [
   {
-    task: "Obtain Gains",
-    id: Date.now(),
-    completed: false
-  },
-  {
-    task: "Aquire the Sickest of Guido Pumps",
-    id: Date.now(),
-    completed: false
-  },
-  {
-    task: "Crack Sidewalks",
-    id: Date.now(),
-    completed: false
-  },
-  {
-    task: "Busta Flex On 'EM",
+    task: "",
     id: Date.now(),
     completed: false
   }

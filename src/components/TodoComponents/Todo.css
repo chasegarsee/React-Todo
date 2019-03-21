@@ -1,22 +1,96 @@
 .todos-task {
-  background-color: aliceblue;
-  border-bottom: 1px solid black;
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic,
+    "AppleGothic", sans-serif;
+  color: white;
+  width: 100%;
   margin: 20px;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px black;
 }
 
-button {
-  margin: auto;
-  width: 100%;
-  background-color: aliceblue;
+h1 {
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic,
+    "AppleGothic", sans-serif;
+  font-size: 2.1rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: salmon;
+  text-shadow: 2px 2px 5px black;
+  font-weight: 100;
+  border: dashed 2px salmon;
+  padding: 5px;
+}
+
+.todos-task:hover {
+  transition: 400ms ease all;
+  font-size: 2.2rem;
+}
+
+.todos-task:hover:before,
+.todos-task:hover:after {
+  transition: 800ms ease all;
 }
 
 .body {
   margin: auto;
-  border: solid 1px green;
+  width: auto;
+  height: 900px;
+  border: solid 1px rgba(0, 128, 0, 0.208);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: url("./images/aerial-aquatic-bird-s-eye-view-1726310.jpg");
+  background-size: cover;
+}
+
+button {
+  background: #1aab8956;
+  color: #fff;
+  border: none;
+  position: relative;
+  height: 60px;
+  font-size: 1.6em;
+  text-shadow: 3px 3px 5px black;
+  padding: 0 2em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+  margin: 10px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 5px black;
+}
+button:hover {
+  text-shadow: 0 0 0 none;
+  font-size: 2rem;
+  color: salmon;
+  border-radius: 0px;
+}
+button:before,
+button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #1aab8a;
+  transition: 400ms ease all;
+  border-radius: 0px;
+}
+button:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+button:hover:before,
+button:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+  border-radius: 0px;
 }
 
 form {
@@ -26,5 +100,9 @@ form {
 
 input {
   box-shadow: 1px 1px 5px goldenrod;
-  border: solid 2px goldenrod;
+  border: solid 2px salmon;
+  height: 50px;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 3px 3px 5px black;
 }

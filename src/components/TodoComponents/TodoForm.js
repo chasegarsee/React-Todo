@@ -10,8 +10,10 @@ function TodoForm(props) {
         placeholder="new task"
         onChange={props.handleChanges}
       />
-      <button type="submit">Add New Todo</button>
-      <button onClick={props.clearTodo}>Clear Completed</button>
+      <div className="btn">
+        <button type="submit">Add New Todo</button>
+        <button onClick={props.clearTodo}>Clear Completed</button>
+      </div>
     </form>
   );
 }
