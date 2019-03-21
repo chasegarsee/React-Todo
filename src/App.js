@@ -47,6 +47,16 @@ class App extends React.Component {
     });
   };
 
+  clearTodo = event => {
+    event.preventDefault();
+    const newList = this.state.todoList.filter(
+      element => element.completed === false
+    );
+    this.setState({
+      todoList: newList
+    });
+  };
+
   render() {
     return (
       <div className="body">
@@ -56,6 +66,7 @@ class App extends React.Component {
           addNewTodo={this.addNewTodo}
           handleChanges={this.handleChanges}
           task={this.state.task}
+          clearTodo={this.clearTodo}
         />
       </div>
     );

@@ -11,7 +11,7 @@ function TodoForm(props) {
         onChange={props.handleChanges}
       />
       <button type="submit">Add New Todo</button>
-      <button type="submit">Clear Completed</button>
+      <button onClick={props.clearTodo}>Clear Completed</button>
     </form>
   );
 }
