@@ -1,38 +1,3 @@
-.todos-task {
-  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic,
-    "AppleGothic", sans-serif;
-  color: white;
-  width: 100%;
-  margin: 20px;
-  font-size: 2rem;
-  text-align: center;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 5px black;
-}
-
-h1 {
-  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic,
-    "AppleGothic", sans-serif;
-  font-size: 2.1rem;
-  text-align: center;
-  text-transform: uppercase;
-  color: salmon;
-  text-shadow: 2px 2px 5px black;
-  font-weight: 100;
-  border: dashed 2px salmon;
-  padding: 5px;
-}
-
-.todos-task:hover {
-  transition: 400ms ease all;
-  font-size: 2.2rem;
-}
-
-.todos-task:hover:before,
-.todos-task:hover:after {
-  transition: 800ms ease all;
-}
-
 .body {
   margin: auto;
   width: auto;
@@ -46,7 +11,81 @@ h1 {
   background-size: cover;
 }
 
-button {
+.todo-container {
+  margin: auto;
+  width: 100%;
+}
+
+.todos-task {
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic,
+    "AppleGothic", sans-serif;
+  color: white;
+  padding: 5px;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px black;
+}
+
+.completed {
+  text-decoration: line-through salmon wavy;
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic,
+    "AppleGothic", sans-serif;
+  color: white;
+  padding: 5px;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px black;
+}
+
+h1 {
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic,
+    "AppleGothic", sans-serif;
+  font-size: 4rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: salmon;
+  text-shadow: 2px 2px 5px black;
+  font-weight: 100;
+  border: dashed 2px salmon;
+  padding: 5px;
+}
+
+.todos-task:hover {
+  transition: 400ms ease all;
+  font-size: 4rem;
+}
+
+.todos-task:hover:before,
+.todos-task:hover:after {
+  transition: 800ms ease all;
+}
+
+.btn {
+  width: 250px;
+  background: #1aab8956;
+  color: #fff;
+  border: none;
+  text-align: center;
+  position: relative;
+  height: 60px;
+  font-size: 1.6em;
+  text-shadow: 3px 3px 5px black;
+  cursor: pointer;
+  transition: 800ms ease all;
+  margin: 10px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 5px black;
+}
+.btn:hover {
+  text-shadow: 0 0 0 none;
+  font-size: 2rem;
+  color: salmon;
+  border-radius: none;
+}
+
+.btn-two {
   background: #1aab8956;
   color: #fff;
   border: none;
@@ -62,14 +101,16 @@ button {
   border-radius: 20px;
   box-shadow: 3px 3px 5px black;
 }
-button:hover {
+
+.btn-two:hover {
   text-shadow: 0 0 0 none;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: salmon;
-  border-radius: 0px;
+  border-radius: none;
 }
-button:before,
-button:after {
+
+.btn:before,
+.btn:after {
   content: "";
   position: absolute;
   top: 0;
@@ -80,15 +121,14 @@ button:after {
   transition: 400ms ease all;
   border-radius: 0px;
 }
-button:after {
+.btn:after {
   right: inherit;
   top: inherit;
   left: 0;
   bottom: 0;
 }
-button:hover:before,
-button:hover:after {
-  width: 100%;
+.btn:hover:before,
+.btn:hover:after {
   transition: 800ms ease all;
   border-radius: 0px;
 }
@@ -100,7 +140,7 @@ form {
 
 input {
   box-shadow: 1px 1px 5px goldenrod;
-  border: solid 2px salmon;
+  border: none;
   height: 50px;
   margin: 10px;
   text-align: center;

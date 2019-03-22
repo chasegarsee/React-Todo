@@ -1,16 +1,29 @@
 import React from "react";
 import TodoForm from "./components/TodoComponents/TodoForm";
 import TodoList from "./components/TodoComponents/TodoList";
-import "./components/TodoComponents/Todo.css";
-
 const todoData = [
   {
-    task: "",
-    id: Date.now(),
+    task: "Pump Iron",
+    id: 1,
+    completed: false
+  },
+  {
+    task: "Get Swole",
+    id: 2,
+    completed: false
+  },
+  {
+    task: "Busta Flex on Em",
+    id: 3,
+    completed: false
+  },
+  {
+    task: "Get the Girl",
+    id: 4,
     completed: false
   }
 ];
-
+console.log(todoData);
 class App extends React.Component {
   constructor() {
     super();
@@ -19,45 +32,65 @@ class App extends React.Component {
       task: ""
     };
   }
-
   handleChanges = event => {
     this.setState({ [event.target.name]: event.target.value });
   };
-
   addNewTodo = event => {
     event.preventDefault();
     this.setState({
-      todoList: [...this.state.todoList, { task: this.state.task }],
+      todoList: [
+        ...this.state.todoList,
+
+        {
+          task: this.state.task,
+          id: Date.now(),
+          completed: false
+        }
+      ],
       task: ""
     });
   };
 
-  clearTodo = event => {
-    event.preventDefault();
-    const newList = this.state.todoList.filter(
-      element => element.completed === false
-    );
+  toggleCompleted = id => {
+    console.log(id);
     this.setState({
-      todoList: newList
+      todoList: this.state.todoList.map(todo => {
+        if (id !== todo.id) {
+          return todo;
+        } else {
+          return {
+            ...todo,
+            completed: !todo.completed
+          };
+        }
+      })
+    });
+  };
+
+  clearCompleted = event => {
+    event.preventDefault();
+    this.setState({
+      todoList: this.state.todoList.filter(todo => todo.completed === false)
     });
   };
 
   render() {
     return (
       <div className="body">
-        <h1>Things to do at the Pumpatorium</h1>
-        <TodoList todoDataList={this.state.todoList} />
+        <TodoList
+          toggleCompleted={this.toggleCompleted}
+          todoDataList={this.state.todoList}
+        />
         <TodoForm
+          clearCompleted={this.clearCompleted}
           addNewTodo={this.addNewTodo}
           handleChanges={this.handleChanges}
           task={this.state.task}
-          clearTodo={this.clearTodo}
         />
       </div>
     );
   }
 }
-
 export default App;
 
 /*
