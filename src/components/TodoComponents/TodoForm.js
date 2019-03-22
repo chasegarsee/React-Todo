@@ -5,10 +5,11 @@ function TodoForm(props) {
   return (
     <form onSubmit={props.addNewTodo}>
       <input
+        className="inputForm"
         value={props.task}
         type="text"
         name="task"
-        placeholder="...todo"
+        placeholder="THINGS"
         onChange={props.handleChanges}
       />
       <button className="btn" type="submit">

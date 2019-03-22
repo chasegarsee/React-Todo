@@ -28,15 +28,16 @@
 }
 
 .completed {
-  text-decoration: line-through salmon wavy;
   font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic,
     "AppleGothic", sans-serif;
-  color: white;
+  color: rgba(255, 255, 255, 0.502);
+  background-color: rgba(0, 0, 0, 0.379);
   padding: 5px;
-  font-size: 2rem;
+  font-size: 1rem;
   text-align: center;
   text-transform: uppercase;
   text-shadow: 2px 2px 5px black;
+  border-radius: 50px;
 }
 
 h1 {
@@ -53,13 +54,8 @@ h1 {
 }
 
 .todos-task:hover {
-  transition: 400ms ease all;
-  font-size: 4rem;
-}
-
-.todos-task:hover:before,
-.todos-task:hover:after {
   transition: 800ms ease all;
+  font-size: 4rem;
 }
 
 .btn {
@@ -139,8 +135,21 @@ form {
 }
 
 input {
+  background-color: rgba(255, 255, 255, 0.447);
   box-shadow: 1px 1px 5px goldenrod;
   border: none;
+  height: 50px;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 3px 3px 5px black;
+}
+
+.inputForm:hover {
+  transition: 800ms ease all;
+  background-color: rgba(255, 255, 255);
+  box-shadow: 1px 1px 5px goldenrod;
+  border: none;
+  font-size: 1.5rem;
   height: 50px;
   margin: 10px;
   text-align: center;
