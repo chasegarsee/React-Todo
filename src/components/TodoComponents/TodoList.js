@@ -1,11 +1,21 @@
 import React from "react";
-import Todo from "./Todo";
 import "./Todo.css";
+
+import Todo from "./Todo";
+
 function TodoList(props) {
   return (
-    <div className="todos-task">
-      {props.todoDataList.map((todoParam, index) => {
-        return <Todo todos={todoParam} key={index} />;
+    <div className="todo-container">
+      <h1>Things:</h1>
+      {props.todoDataList.map((todo, id) => {
+        return (
+          <Todo
+            className="todos-task"
+            todo={todo}
+            key={todo.id}
+            toggleCompleted={props.toggleCompleted}
+          />
+        );
       })}
     </div>
   );
